@@ -362,7 +362,7 @@ figure {
 	display: flex;
 	align-items: center;
 }
-.flex-icon:hover{
+.flex-icon:hover {
 	--color1: var(--active-color);
 	cursor: pointer;
 }
@@ -378,10 +378,12 @@ figure {
 .mail-space {
 	margin-right: 50px;
 }
-.active-color:hover {
-	color: var(--active-color);
-	cursor: pointer;
+
+.active-color {
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.active-color:hover,
 .active-color:active {
 	color: var(--active-color);
 	cursor: pointer;
@@ -449,6 +451,28 @@ figure {
 .section-light {
 	list-style: none;
 	background-color: var(--main-white);
+}
+
+.div-rel {
+	position: relative;
+}
+
+.div-absolut {
+	position: absolute;
+	bottom: 0;
+	width: 370px;
+	height: 70px;
+	background: rgba(47, 48, 58, 0.8);
+}
+
+.p-absolut {
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 1.1721;
+	color: var(--main-white);
+	text-transform: uppercase;
+	text-align: center;
+	margin-top: 27px;
 }
 
 .extra-paddig-top {
@@ -531,11 +555,10 @@ figure {
 	border: 1px solid #afb1b8;
 	border-radius: 4px;
 }
-.client-icons:hover{
+.client-icons:hover {
 	border: 1px solid var(--active-color);
 	--color2: var(--active-color);
 	cursor: pointer;
-	
 }
 
 .ellipse-section {
@@ -543,9 +566,10 @@ figure {
 	height: 44px;
 	border-radius: 50%;
 	background-color: var(--main-white);
-	/* background-color: red; */
+	fill: var(--color2);
+	/* transition: fill 3s cubic-bezier(0.4, 0, 0.2, 1); */
 }
-.ellipse-section:hover{
+.ellipse-section:hover {
 	background-color: var(--active-color);
 	--color2: var(--main-white);
 	cursor: pointer;
@@ -626,15 +650,15 @@ figure {
 	border-radius: 50%;
 	background-color: rgba(255, 255, 255, 0.1);
 }
-.ellipse-footer:hover{
-background-color: var(--active-color);
+.ellipse-footer:hover {
+	background-color: var(--active-color);
 	--color2: var(--main-white);
 	cursor: pointer;
 }
 .icon-position {
 	margin: 12px;
 }
-.icon-sopace{
+.icon-sopace {
 	margin-right: 10px;
 }
 /* portfolio */
