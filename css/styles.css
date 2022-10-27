@@ -452,23 +452,26 @@ figure {
 	cursor: pointer;
 }
 
-.btn-style:active ,.is-hidden{
-	animation-name: modalUp;
-	animation-duration: 10s ;
-	animation-timing-function: ease;
+.btn-style:active,
+.modal {
+	animation: modalUp 10s ease;
 }
 
-@keyframes modalUp{
-	0%{
+@keyframes modalUp {
+	from {
 		opacity: 0;
 	}
-	50%{
-		opacity: 0.5;
+	to {
+		opacity: 1;
 	}
-	100%{
-		opacity:1;
+}
+@keyframes modalDown {
+	from {
+		opacity: 0;
 	}
-
+	to {
+		opacity: 1;
+	}
 }
 /* style main */
 
@@ -722,6 +725,8 @@ figure {
 	background-color: #fff;
 	border-radius: 4px;
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	animation: modalDown 10s ease;
+	animation: modalUp 20s ease;
 }
 
 .close-btn {
@@ -741,6 +746,11 @@ figure {
 
 .close-btn:hover {
 	cursor: pointer;
+}
+
+.close-btn:active .model,
+.close-btn:active .backdrop {
+	animation: modalDown 10s ease;
 }
 
 .is-hidden {
@@ -832,7 +842,6 @@ figure {
 	background-color: rgba(33, 150, 243, 0.9);
 	transform: translateY(+100%);
 	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 .overlay {
 	position: relative;
