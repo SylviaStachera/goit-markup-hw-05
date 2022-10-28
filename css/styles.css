@@ -452,27 +452,11 @@ figure {
 	cursor: pointer;
 }
 
-.btn-style:active,
+/* .btn-style:active,
 .modal {
-	animation: modalUp 10s ease;
-}
+	animation: modalUp 20s ease-in;
+} */
 
-@keyframes modalUp {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
-@keyframes modalDown {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
 /* style main */
 
 .section {
@@ -706,6 +690,23 @@ figure {
 
 /* okno modalne */
 
+@keyframes modalUp {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes modalDown {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
 .backdrop {
 	position: absolute;
 	top: 0;
@@ -716,6 +717,7 @@ figure {
 }
 
 .modal {
+	/* opacity: 1; */
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -725,8 +727,17 @@ figure {
 	background-color: #fff;
 	border-radius: 4px;
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-	animation: modalDown 10s ease;
-	animation: modalUp 20s ease;
+	transition: opacity 10s linear;
+
+	/* transition: opacity 10s linear; */
+	/* animation: modalUp 5s linear forwards; */
+	/* animation: modalDown 2s linear; */
+}
+/* .btn-style:active {
+	opacity: 1;
+} */
+.modal::after {
+	opacity: 1;
 }
 
 .close-btn {
@@ -748,16 +759,18 @@ figure {
 	cursor: pointer;
 }
 
-.close-btn:active .model,
-.close-btn:active .backdrop {
-	animation: modalDown 10s ease;
-}
+/* .close-btn:active .modal {
+	transition: opacity 10s linear;
+} */
 
 .is-hidden {
 	visibility: hidden;
 	opacity: 0;
 	pointer-events: none;
+	transition: opacity 10s linear;
+
 }
+
 /* portfolio */
 
 .ul-btn {
