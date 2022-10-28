@@ -452,11 +452,6 @@ figure {
 	cursor: pointer;
 }
 
-/* .btn-style:active,
-.modal {
-	animation: modalUp 20s ease-in;
-} */
-
 /* style main */
 
 .section {
@@ -714,10 +709,10 @@ figure {
 	height: 100%;
 	width: 100%;
 	background: rgba(0, 0, 0, 0.2);
+	transition: opacity 1s linear;
 }
 
 .modal {
-	/* opacity: 1; */
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -727,17 +722,6 @@ figure {
 	background-color: #fff;
 	border-radius: 4px;
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-	transition: opacity 10s linear;
-
-	/* transition: opacity 10s linear; */
-	/* animation: modalUp 5s linear forwards; */
-	/* animation: modalDown 2s linear; */
-}
-/* .btn-style:active {
-	opacity: 1;
-} */
-.modal::after {
-	opacity: 1;
 }
 
 .close-btn {
@@ -759,16 +743,9 @@ figure {
 	cursor: pointer;
 }
 
-/* .close-btn:active .modal {
-	transition: opacity 10s linear;
-} */
-
 .is-hidden {
-	visibility: hidden;
 	opacity: 0;
 	pointer-events: none;
-	transition: opacity 10s linear;
-
 }
 
 /* portfolio */
