@@ -713,7 +713,7 @@ figure {
 	height: 100%;
 	width: 100%;
 	background: rgba(0, 0, 0, 0.2);
-	transition: opacity 1s linear;
+	transition: opacity 0.25s linear;
 }
 
 .modal {
