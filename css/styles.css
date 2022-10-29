@@ -390,6 +390,9 @@ figure {
 	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.active-color-page{
+	position: relative;
+}
 .active-color:active,
 .active-color:hover,
 .active-color-page:hover {
@@ -397,13 +400,14 @@ figure {
 	cursor: pointer;
 }
 
-.active-color-page:active,
 .active-color-page::after {
 	content: '';
-	color: var(--active-color);
-	cursor: pointer;
-	padding-bottom: 28px;
-	border-bottom: 4px solid var(--active-color);
+	position: absolute;
+	bottom: -32px;
+	left: -5%;
+	background-color: var(--active-color);
+	height: 4px;
+	width: 110%;
 	border-radius: 2px;
 }
 
